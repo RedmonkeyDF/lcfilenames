@@ -1,0 +1,5 @@
+# Ignore Jetbrains project directory
+\.idea/
+
+# Ignore binary directory
+bin/
