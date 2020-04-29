@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	mfu "github.com/RedmonkeyDF/mfmodfileutil"
+	"github.com/RedmonkeyDF/mffileutil"
 	"github.com/akamensky/argparse"
 	"log"
 	"os"
@@ -53,7 +53,7 @@ func lcfnames(adir string, dryrun bool) error {
 		return errors.New(fmt.Sprintf("Unexpected error retrieving absolute path for \"%s\".  Error: %s", adir, errabs))
 	}
 
-	de, errde := mfu.DirectoryExists(opdir)
+	de, errde := mffileutil.DirectoryExists(opdir)
 	if errde != nil {
 
 		return errors.New(fmt.Sprintf("Unexpected error checking if directory \"%s\" exists.  Error: %s", opdir, errde))
